@@ -1,0 +1,14 @@
+@use '../variables' as var;
+
+body {
+    font-family:var.$font-body;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 300;
+}
+
+.heading {
+font-family: var.$font-heading; // use the playfair font for headings
+}
