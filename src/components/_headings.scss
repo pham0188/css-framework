@@ -1,0 +1,37 @@
+@use '../variables' as var;
+
+
+
+/* ---- mixin ---- */
+@mixin heading($size-key, $weight: 700, $color: inherit, $lh: 1.2) {
+    font-family: var.$font-heading;
+    font-size: map-get(var.$font-sizes, $size-key);
+    font-weight: $weight;
+    line-height: $lh;
+    margin-bottom: 1rem;
+    color: $color;
+}
+
+/* headings */
+h1 { 
+    @include heading('3xl', 100); 
+    text-transform: uppercase;
+}
+h2 { @include heading('2xl', 100); }
+h3 { @include heading('xl', 200); }
+h4 { @include heading('lg', 300); } 
+h5 { @include heading('md', 400); } 
+h6 { @include heading('sm', 400, #6b7280, 1.4); }
+
+
+/* ---- utility classes ---- */
+
+.h1 { 
+    @include heading('3xl', 100); 
+    text-transform: uppercase;
+}
+.h2 { @include heading('2xl', 100); } 
+.h3 { @include heading('xl', 200); }
+.h4 { @include heading('lg', 300); }
+.h5 { @include heading('md', 400); }
+.h6 { @include heading('sm', 400, #6b7280, 1.4); }
