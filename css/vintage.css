@@ -114,6 +114,7 @@ meter {
   display: none;
 }
 
+/* map */
 .font-xs {
   font-size: 11px;
 }
@@ -153,6 +154,364 @@ h1 {
 
 .heading {
   font-family: "Playfair Display", serif;
+}
+
+/* ---- mixin ---- */
+/* headings */
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 52px;
+  font-weight: 100;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 200;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+h5 {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+h6 {
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: #6b7280;
+}
+
+/* ---- utility classes ---- */
+.h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 52px;
+  font-weight: 100;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 200;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.h5 {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.h6 {
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: #6b7280;
+}
+
+/* mixin */
+/* main button styles */
+.btn {
+  background-color: #C4BFAF;
+  color: #1E1E1E;
+  border: none;
+  padding: 1.5rem 3.25rem;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+.btn:hover {
+  background-color: rgb(174.3525179856, 167.5179856115, 145.6474820144);
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background-color: #2C3E50;
+  color: #EEE4D3;
+  border: none;
+  padding: 1.5rem 3.25rem;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+.btn-primary:hover {
+  background-color: rgb(25.9032258065, 36.5, 47.0967741935);
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  background-color: #C98540;
+  color: #EEE4D3;
+  border: none;
+  padding: 1.5rem 3.25rem;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+.btn-secondary:hover {
+  background-color: rgb(166.8326530612, 107.4367346939, 47.1673469388);
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success {
+  background-color: #802F1D;
+  color: #EEE4D3;
+  border: none;
+  padding: 1.5rem 3.25rem;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+.btn-success:hover {
+  background-color: rgb(86.4203821656, 31.7324840764, 19.5796178344);
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #2C3E50;
+  border: none;
+  padding: 1.5rem 3.25rem;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+.btn-outline:hover {
+  background-color: rgba(0, 0, 0, 0);
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.btn-outline {
+  border: 2px solid #2C3E50;
+}
+.btn-outline:hover {
+  background-color: #2C3E50;
+  color: #EEE4D3;
+}
+
+/* ---------------- COLOUR UTILITIES ---------------- */
+.bg-paper {
+  background-color: #EEE4D3;
+}
+
+.bg-dust {
+  background-color: #C4BFAF;
+}
+
+.bg-ink {
+  background-color: #2C3E50;
+}
+
+.bg-stamp {
+  background-color: #802F1D;
+}
+
+.bg-settled-tea {
+  background-color: #C98540;
+}
+
+.text-paper {
+  color: #EEE4D3;
+}
+
+.text-dust {
+  color: #C4BFAF;
+}
+
+.text-ink {
+  color: #2C3E50;
+}
+
+.text-stamp {
+  color: #802F1D;
+}
+
+.text-settled-tea {
+  color: #C98540;
+}
+
+/* ---------------- FONT UTILITIES ---------------- */
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fs-sm {
+  font-size: 14px;
+}
+
+.fs-md {
+  font-size: 18px;
+}
+
+.fs-lg {
+  font-size: 26px;
+}
+
+.fs-xl {
+  font-size: 28px;
+}
+
+/* ---------------- SPACING UTILITIES ---------------- */
+.m-0 {
+  margin: 0;
+}
+
+.m-sm {
+  margin: 0.25rem;
+}
+
+.m-md {
+  margin: 0.5rem;
+}
+
+.m-lg {
+  margin: 1rem;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.p-sm {
+  padding: 0.25rem;
+}
+
+.p-md {
+  padding: 0.5rem;
+}
+
+.p-lg {
+  padding: 1rem;
+}
+
+/* ---------------- BORDER UTILITIES ---------------- */
+.border {
+  border: 1px solid #2C3E50;
+}
+
+.border-none {
+  border: none;
+}
+
+.rounded-sm {
+  border-radius: 4px;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+.rounded-lg {
+  border-radius: 16px;
 }
 
 /*# sourceMappingURL=vintage.css.map */
