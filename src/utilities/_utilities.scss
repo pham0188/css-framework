@@ -4,14 +4,14 @@
 .bg-paper       { background-color: var.$paper; }
 .bg-dust        { background-color: var.$dust; }
 .bg-ink         { background-color: var.$ink; }
-.bg-stamp       { background-color: var.$stamp; }
-.bg-settled-tea { background-color: var.$settled-tea; }
+.bg-red         { background-color: var.$red; }
+.bg-yellow      { background-color: var.$yellow; }
 
 .text-paper       { color: var.$paper; }
 .text-dust        { color: var.$dust; }
 .text-ink         { color: var.$ink; }
-.text-stamp       { color: var.$stamp; }
-.text-settled-tea { color: var.$settled-tea; }
+.text-red         { color: var.$red; }
+.text-yellow      { color: var.$yellow; }
 
 /* ---------------- FONT UTILITIES ---------------- */
 .fw-100 { font-weight: 100; }

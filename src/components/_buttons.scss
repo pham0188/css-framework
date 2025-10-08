@@ -27,8 +27,8 @@
 /* main button styles */
 .btn            { @include button(var.$dust, var.$grey); }
 .btn-primary    { @include button(var.$ink); }
-.btn-secondary  { @include button(var.$settled-tea); } 
-.btn-success    { @include button(var.$stamp); }
+.btn-secondary  { @include button(var.$yellow); } 
+.btn-success    { @include button(var.$red); }
 .btn-outline {
     @include button(transparent, var.$ink);
     border: 1px solid var.$ink;

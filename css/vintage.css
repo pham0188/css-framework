@@ -391,11 +391,11 @@ h6 {
   background-color: #2C3E50;
 }
 
-.bg-stamp {
+.bg-red {
   background-color: #802F1D;
 }
 
-.bg-settled-tea {
+.bg-yellow {
   background-color: #C98540;
 }
 
@@ -411,11 +411,11 @@ h6 {
   color: #2C3E50;
 }
 
-.text-stamp {
+.text-red {
   color: #802F1D;
 }
 
-.text-settled-tea {
+.text-yellow {
   color: #C98540;
 }
 
