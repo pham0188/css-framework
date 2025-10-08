@@ -25,13 +25,13 @@
 }
 
 /* main button styles */
-.btn            { @include button(var.$dust, var.$handwriting); }
+.btn            { @include button(var.$dust, var.$grey); }
 .btn-primary    { @include button(var.$ink); }
 .btn-secondary  { @include button(var.$settled-tea); } 
 .btn-success    { @include button(var.$stamp); }
 .btn-outline {
     @include button(transparent, var.$ink);
-    border: 2px solid var.$ink;
+    border: 1px solid var.$ink;
 
     &:hover {
         background-color: var.$ink;

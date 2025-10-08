@@ -1,18 +1,22 @@
-// Hey Grace, I just added the colours you sent in the group here cuz I needed for the buttons :)
+// Colors
 
 $paper:      #EEE4D3;
 $dust:       #C4BFAF;
 $ink:        #2C3E50;
-$handwriting:#1E1E1E;
+$grey:       #1E1E1E;
 $stamp:      #802F1D; 
 $settled-tea:#C98540;
+$black:      #000000;
+$white:      #FFFFFF;
 
 /* map */
 $colors: (
     'paper': $paper,
     'dust': $dust,
     'ink': $ink,
-    'handwriting': $handwriting,
+    'grey': $grey,
     'stamp': $stamp,
-    'settled-tea': $settled-tea
+    'settled-tea': $settled-tea,
+    'black': $black,
+    'white': $white
 );
