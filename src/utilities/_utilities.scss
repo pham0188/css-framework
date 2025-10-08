@@ -1,4 +1,11 @@
+@use 'sass:map';
 @use '../variables' as var;
+@use '../variables/font-weight' as *;
+@use '../variables/padding' as *;
+@use '../variables/margin' as *;
+@use '../variables/border' as *;
+@use '../variables/text-align' as *;
+@use '../variables/sizing' as sizing;
 
 /* ---------------- COLOUR UTILITIES ---------------- */
 .bg-paper       { background-color: var.$paper; }
@@ -6,43 +13,250 @@
 .bg-ink         { background-color: var.$ink; }
 .bg-red         { background-color: var.$red; }
 .bg-yellow      { background-color: var.$yellow; }
+.bg-grey        { background-color: var.$grey; }
+.bg-black       { background-color: var.$black; }
+.bg-white       { background-color: var.$white; }
 
 .text-paper       { color: var.$paper; }
 .text-dust        { color: var.$dust; }
 .text-ink         { color: var.$ink; }
 .text-red         { color: var.$red; }
 .text-yellow      { color: var.$yellow; }
+.text-grey        { color: var.$grey; }
+.text-black       { color: var.$black; }
+.text-white       { color: var.$white; }
 
 /* ---------------- FONT UTILITIES ---------------- */
-.fw-100 { font-weight: 100; }
-.fw-200 { font-weight: 200; }
-.fw-300 { font-weight: 300; }
-.fw-400 { font-weight: 400; }
-.fw-600 { font-weight: 600; }
-.fw-700 { font-weight: 700; }
-
-.fs-sm  { font-size: map-get(var.$font-sizes, 'sm'); }
-.fs-md  { font-size: map-get(var.$font-sizes, 'md'); }
-.fs-lg  { font-size: map-get(var.$font-sizes, 'lg'); }
-.fs-xl  { font-size: map-get(var.$font-sizes, 'xl'); }
+@each $name, $value in $font-weight {
+    .fw-#{$name} {
+      font-weight: $value !important;
+    }
+  }
 
 
-// GRACE TAKE A LOOK AND UPDATE THE FOLLOWING VALUES WHEN YOU'RE DONE WITH THE VARIABLES
+  @each $size, $value in sizing.$font-sizes {
+    .fs-#{$size} {
+        font-size: $value;
+    }
+}
 
-/* ---------------- SPACING UTILITIES ---------------- */
-.m-0   { margin: 0; }
-.m-sm  { margin: 0.25rem; }
-.m-md  { margin: 0.5rem; }
-.m-lg  { margin: 1rem; }
 
-.p-0   { padding: 0; }
-.p-sm  { padding: 0.25rem; }
-.p-md  { padding: 0.5rem; }
-.p-lg  { padding: 1rem; }
+/* ---------------- PADDING UTILITIES ---------------- */
+
+// Padding utilities - all sides
+@each $name, $value in $padding {
+    .p-#{$name} {
+      padding: $value !important;
+    }
+  }
+  
+  // Padding X-axis (left & right)
+  @each $name, $value in $padding {
+    .px-#{$name} {
+      padding-left: $value !important;
+      padding-right: $value !important;
+    }
+  }
+  
+  // Padding Y-axis (top & bottom)
+  @each $name, $value in $padding {
+    .py-#{$name} {
+      padding-top: $value !important;
+      padding-bottom: $value !important;
+    }
+  }
+  
+  // Padding Top
+  @each $name, $value in $padding {
+    .pt-#{$name} {
+      padding-top: $value !important;
+    }
+  }
+  
+  // Padding Bottom
+  @each $name, $value in $padding {
+    .pb-#{$name} {
+      padding-bottom: $value !important;
+    }
+  }
+  
+  // Padding Left
+  @each $name, $value in $padding {
+    .pl-#{$name} {
+      padding-left: $value !important;
+    }
+  }
+  
+  // Padding Right
+  @each $name, $value in $padding {
+    .pr-#{$name} {
+      padding-right: $value !important;
+    }
+  }
+
+
+/* ---------------- MARGIN UTILITIES ---------------- */
+
+// Margin utilities - all sides
+@each $name, $value in $margin {
+    .m-#{$name} {
+      margin: $value !important;
+    }
+  }
+  
+  // Margin X-axis (left & right)
+  @each $name, $value in $margin {
+    .mx-#{$name} {
+      margin-left: $value !important;
+      margin-right: $value !important;
+    }
+  }
+  
+  // Margin Y-axis (top & bottom)
+  @each $name, $value in $margin {
+    .my-#{$name} {
+      margin-top: $value !important;
+      margin-bottom: $value !important;
+    }
+  }
+  
+  // Margin Top
+  @each $name, $value in $margin {
+    .mt-#{$name} {
+      margin-top: $value !important;
+    }
+  }
+  
+  // Margin Bottom
+  @each $name, $value in $margin {
+    .mb-#{$name} {
+      margin-bottom: $value !important;
+    }
+  }
+  
+  // Margin Left
+  @each $name, $value in $margin {
+    .ml-#{$name} {
+      margin-left: $value !important;
+    }
+  }
+  
+  // Margin Right
+  @each $name, $value in $margin {
+    .mr-#{$name} {
+      margin-right: $value !important;
+    }
+  }
 
 /* ---------------- BORDER UTILITIES ---------------- */
-.border        { border: 1px solid var.$ink; }
-.border-none   { border: none; }
-.rounded-sm    { border-radius: 4px; }
-.rounded       { border-radius: 8px; }
-.rounded-lg    { border-radius: 16px; }
+// Border width utilities - all sides
+@each $name, $value in $border-width {
+    .border-#{$name} {
+      border-width: $value !important;
+      border-style: solid !important;
+    }
+  }
+  
+  // Border width utilities - individual sides
+  @each $name, $value in $border-width {
+    .border-t-#{$name} {
+      border-top-width: $value !important;
+      border-top-style: solid !important;
+    }
+    
+    .border-b-#{$name} {
+      border-bottom-width: $value !important;
+      border-bottom-style: solid !important;
+    }
+    
+    .border-l-#{$name} {
+      border-left-width: $value !important;
+      border-left-style: solid !important;
+    }
+    
+    .border-r-#{$name} {
+      border-right-width: $value !important;
+      border-right-style: solid !important;
+    }
+  }
+  
+  // Border width utilities - x and y axis
+  @each $name, $value in $border-width {
+    .border-x-#{$name} {
+      border-left-width: $value !important;
+      border-right-width: $value !important;
+      border-left-style: solid !important;
+      border-right-style: solid !important;
+    }
+    
+    .border-y-#{$name} {
+      border-top-width: $value !important;
+      border-bottom-width: $value !important;
+      border-top-style: solid !important;
+      border-bottom-style: solid !important;
+    }
+  }
+  
+  // Border style utilities
+  @each $name, $value in $border-style {
+    .border-#{$name} {
+      border-style: $value !important;
+    }
+  }
+  
+  // Border radius utilities - all corners
+  @each $name, $value in $border-radius {
+    .rounded-#{$name} {
+      border-radius: $value !important;
+    }
+  }
+  
+  // Border radius utilities - sides
+  @each $name, $value in $border-radius {
+    .rounded-t-#{$name} {
+      border-top-left-radius: $value !important;
+      border-top-right-radius: $value !important;
+    }
+    
+    .rounded-b-#{$name} {
+      border-bottom-left-radius: $value !important;
+      border-bottom-right-radius: $value !important;
+    }
+    
+    .rounded-l-#{$name} {
+      border-top-left-radius: $value !important;
+      border-bottom-left-radius: $value !important;
+    }
+    
+    .rounded-r-#{$name} {
+      border-top-right-radius: $value !important;
+      border-bottom-right-radius: $value !important;
+    }
+  }
+  
+  // Border radius utilities - individual corners
+  @each $name, $value in $border-radius {
+    .rounded-tl-#{$name} {
+      border-top-left-radius: $value !important;
+    }
+    
+    .rounded-tr-#{$name} {
+      border-top-right-radius: $value !important;
+    }
+    
+    .rounded-bl-#{$name} {
+      border-bottom-left-radius: $value !important;
+    }
+    
+    .rounded-br-#{$name} {
+      border-bottom-right-radius: $value !important;
+    }
+  }
+
+/* ---------------- TEXT ALIGNMENT UTILITIES ---------------- */
+
+@each $name, $value in $text-align {
+  .text-#{$name} {
+    text-align: $value !important;
+  }
+}

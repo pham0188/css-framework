@@ -1,0 +1,126 @@
+@use 'sass:map';
+
+// Border widths - vintage inspired
+$border-width: (
+  '0': 0,
+  'hairline': 0.5px,    // delicate vintage line
+  'thin': 1px,          // classic thin border
+  'regular': 2px,       // standard vintage
+  'medium': 3px,        // substantial frame
+  'thick': 4px,         // bold vintage
+  'heavy': 6px,         // picture frame style
+  'extra-heavy': 8px,   // ornate frame
+);
+
+// Border styles - vintage aesthetic
+$border-style: (
+  'solid': solid,
+  'double': double,      // classic double line
+  'groove': groove,      // 3D carved effect
+  'ridge': ridge,        // 3D raised effect
+  'inset': inset,        // pressed-in look
+  'outset': outset,      // raised button look
+  'dashed': dashed,      // vintage stamp style
+  'dotted': dotted,      // delicate dots
+  'none': none,
+);
+
+// Border radius - vintage curves
+$border-radius: (
+  'none': 0,              // sharp corners
+  'subtle': 0.125rem,     // 2px - barely rounded
+  'soft': 0.25rem,        // 4px - gentle vintage
+  'classic': 0.5rem,      // 8px - traditional
+  'ornate': 0.75rem,      // 12px - decorative
+  'curved': 1rem,         // 16px - pronounced curve
+  'vintage': 1.5rem,      // 24px - old-world charm
+  'antique': 2rem,        // 32px - heavily rounded
+  'full': 9999px,         // perfect circle/pill
+);
+
+// Border width mixins
+@mixin border($width: 'regular') {
+  border-width: map.get($border-width, $width);
+  border-style: solid;
+}
+
+@mixin border-top($width: 'regular') {
+  border-top-width: map.get($border-width, $width);
+  border-top-style: solid;
+}
+
+@mixin border-bottom($width: 'regular') {
+  border-bottom-width: map.get($border-width, $width);
+  border-bottom-style: solid;
+}
+
+@mixin border-left($width: 'regular') {
+  border-left-width: map.get($border-width, $width);
+  border-left-style: solid;
+}
+
+@mixin border-right($width: 'regular') {
+  border-right-width: map.get($border-width, $width);
+  border-right-style: solid;
+}
+
+@mixin border-x($width: 'regular') {
+  border-left-width: map.get($border-width, $width);
+  border-right-width: map.get($border-width, $width);
+  border-left-style: solid;
+  border-right-style: solid;
+}
+
+@mixin border-y($width: 'regular') {
+  border-top-width: map.get($border-width, $width);
+  border-bottom-width: map.get($border-width, $width);
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+
+// Border style mixins
+@mixin border-style($style) {
+  border-style: map.get($border-style, $style);
+}
+
+// Border radius mixins - vintage curves
+@mixin rounded($size: 'classic') {
+  border-radius: map.get($border-radius, $size);
+}
+
+@mixin rounded-top($size: 'classic') {
+  border-top-left-radius: map.get($border-radius, $size);
+  border-top-right-radius: map.get($border-radius, $size);
+}
+
+@mixin rounded-bottom($size: 'classic') {
+  border-bottom-left-radius: map.get($border-radius, $size);
+  border-bottom-right-radius: map.get($border-radius, $size);
+}
+
+@mixin rounded-left($size: 'classic') {
+  border-top-left-radius: map.get($border-radius, $size);
+  border-bottom-left-radius: map.get($border-radius, $size);
+}
+
+@mixin rounded-right($size: 'classic') {
+  border-top-right-radius: map.get($border-radius, $size);
+  border-bottom-right-radius: map.get($border-radius, $size);
+}
+
+// Vintage corner styles
+@mixin rounded-top-left($size: 'classic') {
+  border-top-left-radius: map.get($border-radius, $size);
+}
+
+@mixin rounded-top-right($size: 'classic') {
+  border-top-right-radius: map.get($border-radius, $size);
+}
+
+@mixin rounded-bottom-left($size: 'classic') {
+  border-bottom-left-radius: map.get($border-radius, $size);
+}
+
+@mixin rounded-bottom-right($size: 'classic') {
+  border-bottom-right-radius: map.get($border-radius, $size);
+}

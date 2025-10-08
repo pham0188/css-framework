@@ -6,30 +6,127 @@
     <link rel="stylesheet" href="./css/vintage.css">
     <title>Vintage CSS Framework</title>
 </head>
+
 <body>
+<section class="bg-red">
+<h1 class="pt-32 text-center text-white"> Welcome to Vintage CSS</h1>
+<p class="px-32 pt-5 pb-32 text-left text-white">Most modern CSS frameworks embrace minimalism, grids, and sans-serif clarity.  
+    Vintage CSS dares to be different. Inspired by vintage design, timeless typography, this framework offers an elegant alternative to the sleek, sterile look of modern websites.
+    
+    With serif-based headings but easy-to-read body paragraphs, Vintage CSS brings back the charm of a bygone era—while still being responsive, lightweight, and developer-friendly.  
+    
+    Whether you are building a personal portfolio, a boutique brand site, or a storytelling project, Vintage CSS helps you create experiences that feel crafted, timeless, and unique.</p>
+</section>
 
-<h1 class="heading"> Welcome to Vintage CSS</h1>
-<p class="body">This is a simple paragraph styled with Vintage CSS framework. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus consequat est, ut aliquam nunc vulputate vel. Sed at turpis ipsum. Quisque fermentum diam in orci convallis, et laoreet nibh imperdiet. Ut semper mi a sagittis varius. Ut tempor convallis vulputate.</p>
 
-    <!-- Headings -->
 
-    <h1>Heading One</h1>
-    <h2>Heading Two</h2>
-    <h3>Heading Three</h3>
+<!-- ===================== STYLESHEET ===================== -->
 
-    <div class="h1">This is a DIV styled like an H1</div>
-    <div class="h4">This is a DIV styled like an H4</div>
+<section class="p-10 bg-paper">
+    <!-- Heading Section -->
 
-    <!-- Buttons -->
+    <section class="p-6 mb-8 ">
+        <h2 class="text-red">Headings</h2>
+        <h1 class="mb-2">This is Heading 1</h1>
+        <h2 class="mb-2">This is Heading 2</h2>
+        <h3 class="mb-2">This is Heading 3</h3>
+        <h4 class="mb-2">This is Heading 4</h4>
+        <h5 class="mb-2">This is Heading 5</h5>
+        <h6>This is Heading 6</h6>
+    </section>
 
-    <h2>Buttons</h2>
+        <!-- Font Weight Section -->
+
+    <section class="p-6 mb-8 ">
+        <h2 class="text-red">Font Weight Classes</h2>
+        <p class="fw-thin mb-2">This is thin weight (100)</p>
+        <p class="fw-extra-light mb-2">This is extra-light weight (200)</p>
+        <p class="fw-light mb-2">This is light weight (300)</p>
+        <p class="fw-regular mb-2">This is regular weight (400)</p>
+        <p class="fw-medium mb-2">This is medium weight (500)</p>
+        <p class="fw-semi-bold mb-2">This is semi-bold weight (600)</p>
+        <p class="fw-bold mb-2">This is bold weight (700)</p>
+        <p class="fw-extra-bold mb-2">This is extra-bold weight (800)</p>
+        <p class="fw-black">This is black weight (900)</p>
+    </section>
+
+    <!-- Padding Section -->
+    <section class="p-6 mb-8">
+        <h2 class="text-red">Padding Classes</h2>
+        <div class="p-4 mb-3 border-thin border-solid rounded-subtle" style="background: #e8dcc4;">
+            .p-4 - Padding all sides (1rem)
+        </div>
+        <div class="px-8 py-2 mb-3 border-thin border-solid rounded-subtle" style="background: #e8dcc4;">
+            .px-8 .py-2 - Horizontal 2rem, Vertical 0.5rem
+        </div>
+        <div class="pt-6 pb-3 pl-4 pr-8 border-thin border-solid rounded-subtle" style="background: #e8dcc4;">
+            .pt-6 .pb-3 .pl-4 .pr-8 - Individual sides
+        </div>
+    </section>
+
+    <!-- Margin Section -->
+    <section class="p-6 mb-8">
+        <h2 class="text-red">Margin Classes</h2>
+        <div class="border-thin border-solid rounded-subtle" style="background: #e8dcc4;">
+            <div class="m-4 p-3" style="background: #d4c5a9;">
+                .m-4 - Margin all sides (1rem)
+            </div>
+        </div>
+        <div class="mt-6 border-thin border-solid rounded-subtle" style="background: #e8dcc4;">
+            <div class="mx-auto p-3" style="background: #d4c5a9; width: 60%;">
+                .mx-auto - Centered horizontally
+            </div>
+        </div>
+        <div class="mt-4 border-thin border-solid rounded-subtle" style="background: #e8dcc4;">
+            <div class="my-6 p-3" style="background: #d4c5a9;">
+                .my-6 - Vertical margin (1.5rem)
+            </div>
+        </div>
+    </section>
+
+    <!-- Border Width Section -->
+    <section class="p-6 mb-8">
+        <h2 class="text-red">Border Width Classes</h2>
+        <div class="mb-4">
+            <div class="border-hairline p-3 mb-3 rounded-subtle">
+                .border-hairline - Delicate 0.5px border
+            </div>
+            <div class="border-thin p-3 mb-3 rounded-subtle">
+                .border-thin - Classic 1px border
+            </div>
+            <div class="border-regular p-3 mb-3 rounded-subtle">
+                .border-regular - Standard 2px border
+            </div>
+            <div class="border-medium p-3 mb-3 rounded-subtle">
+                .border-medium - Substantial 3px border
+            </div>
+            <div class="border-thick p-3 mb-3 rounded-subtle">
+                .border-thick - Bold 4px border
+            </div>
+            <div class="border-heavy p-3 mb-3 rounded-subtle">
+                .border-heavy - Picture frame 6px border
+            </div>
+            <div class="border-extra-heavy p-3 rounded-subtle">
+                .border-extra-heavy - Ornate 8px border
+            </div>
+        </div>
+</section>
+
+        <!-- Buttons -->
+    <section class="p-6 mb-8">
+    <h2 class="text-red">Buttons</h2>
+    <div class="mb-4">
     <button class="btn">Default</button>
     <button class="btn-primary">Primary</button>
     <button class="btn-secondary">Secondary</button>
     <button class="btn-success">Success</button>
     <button class="btn-outline">Outline</button>
+</div>
+    </section>
 
 
-    
+
+</section>
+
 </body>
 </html>

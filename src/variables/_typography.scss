@@ -10,8 +10,3 @@ $fonts: (
 $font-body: map.get($fonts, 'inter'); // default font for body text
 $font-heading: map.get($fonts, 'playfair'); // font for headings
 
-@each $size, $value in sizing.$font-sizes {
-    .font-#{$size} {
-        font-size: $value;
-    }
-}
