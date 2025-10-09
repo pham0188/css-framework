@@ -1,0 +1,18 @@
+@use '../variables' as var;
+
+// mixin
+@mixin form($max-width: 650px, $bg: var.$ink, $color: var.$paper) {
+    max-width: $max-width;
+    background-color: $bg;
+    color: $color;
+}
+
+// main form styles
+
+.form {
+    @include form();
+}
+
+.label {
+    cursor: pointer;
+}
