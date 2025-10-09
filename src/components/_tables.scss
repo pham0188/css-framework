@@ -1,4 +1,5 @@
 @use "../variables" as var;
+@use "sass:map";
 
 @mixin table-style($color, $border-width, $border-style: solid) {
   border-width: $border-width;
@@ -6,7 +7,7 @@
   border-color: var.$red;
   width: 50%;
   @include var.margin-bottom("4");
-  text-align: map-get(var.$text-align, "center");
+  text-align: map.get(var.$text-align, "center");
 }
 
 @mixin border-y-colored($width: "regular", $style: solid, $color: var.$red) {
@@ -26,12 +27,12 @@
 }
 
 .tb-default {
-  @include table-style(var.$black, map-get(var.$border-width, "thin"));
+  @include table-style(var.$black, map.get(var.$border-width, "thin"));
 
   th,
   td {
     @include var.padding("4");
-    @include table-style(var.$black, map-get(var.$border-width, "thin"));
+    @include table-style(var.$black, map.get(var.$border-width, "thin"));
   }
 }
 

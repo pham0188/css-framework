@@ -1,5 +1,5 @@
 @use '../variables' as var;
-
+@use "sass:map";
 
 /* mixin */
 @mixin button($bg, $color: var.$paper) {
@@ -8,7 +8,7 @@
     border: none;
     padding: 1rem 2.5rem;
     font-family: var.$font-body;
-    font-size: map-get(var.$font-sizes, 'md');
+    font-size: map.get(var.$font-sizes, 'md');
     font-weight: 200;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;

@@ -3,10 +3,10 @@
 @use 'sass:map';
 
 $fonts: (
-    'inter': fonts.$font-inter,
+    'noto': fonts.$font-noto,
     'playfair': fonts.$font-playfair
 );
 
-$font-body: map.get($fonts, 'inter'); // default font for body text
+$font-body: map.get($fonts, 'noto'); // default font for body text
 $font-heading: map.get($fonts, 'playfair'); // font for headings
 

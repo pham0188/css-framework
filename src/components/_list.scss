@@ -1,4 +1,5 @@
 @use "../variables" as var;
+@use "sass:map";
 
 @mixin list-bordered($width: "thin", $style: solid, $color: var.$red) {
   @include var.border($width); // from your _border.scss
@@ -21,7 +22,7 @@
 
 .list-grp {
   width: 33%;
-  text-align: map-get(var.$text-align, "left");
+  text-align: map.get(var.$text-align, "left");
   list-style-position: inside;
 }
 

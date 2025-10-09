@@ -1,0 +1,24 @@
+{
+  "name": "vintage-css",
+  "version": "1.0.0",
+  "description": "Vintage CSS is a CSS framework that brings back the charm of a bygone era—while still being responsive, lightweight, and developer-friendly.",
+  "homepage": "https://github.com/pham0188/css-framework#readme",
+  "bugs": {
+    "url": "https://github.com/pham0188/css-framework/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pham0188/css-framework.git"
+  },
+  "license": "ISC",
+  "author": "Grace Pham, Isabella Britto Boczkovski, Kayla Johnston, Mohammed Lateef",
+  "keywords": ["css", "sass", "framework", "vintage", "retro"],
+  "type": "commonjs",
+  "main": "src/vintage.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/vintage.scss css/vintage.css && sass src/vintage.scss css/vintage.min.css --style=compressed",
+    "watch": "sass --watch src/vintage.scss css/vintage.css"
+
+  }
+}
