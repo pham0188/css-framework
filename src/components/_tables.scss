@@ -1,0 +1,44 @@
+@use "../variables" as var;
+
+@mixin table-style($color, $border-width, $border-style: solid) {
+  border-width: $border-width;
+  border-style: $border-style;
+  border-color: var.$red;
+  width: 50%;
+  @include var.margin-bottom("4");
+  text-align: map-get(var.$text-align, "center");
+}
+
+@mixin border-y-colored($width: "regular", $style: solid, $color: var.$red) {
+  @include var.border-y($width); // from your _border.scss
+  border-top-style: $style;
+  border-bottom-style: $style;
+  border-top-color: $color;
+  border-bottom-color: $color;
+}
+
+.tb {
+  width: 50%;
+  th,
+  td {
+    @include var.padding("4");
+  }
+}
+
+.tb-default {
+  @include table-style(var.$black, map-get(var.$border-width, "thin"));
+
+  th,
+  td {
+    @include var.padding("4");
+    @include table-style(var.$black, map-get(var.$border-width, "thin"));
+  }
+}
+
+.tb-primary {
+  th,
+  td {
+    @include var.padding("4");
+    @include border-y-colored("thin");
+  }
+}
