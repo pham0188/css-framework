@@ -12,8 +12,9 @@ Whether you’re building a personal portfolio, a boutique brand site, or a stor
 ## Installation
 
 ### Via npm
-````bash`
-`npm install vintage-css`
+```bash
+npm install vintage-css
+```
 or:
 ### Via CND 
 Add this to your HTML `<head>`
@@ -30,7 +31,7 @@ Or your main Sass file: `@use 'vintage-css/src/vintage.scss';`
 
 
 ## Customization Instructions
-Once you've added Vintage CSS to your project, just use classes from `vintage.scss` to your HTML!
+Once you've added Vintage CSS to your project, just use classes from `vintage.css` of this file to your HTML!
 For example, if you want to style a button:
 `<button class="btn-primary">Primary</button>` it will display a button with our primary color!
 See more examples in `index.html` file in our [GitHub](https://github.com/pham0188/css-framework.git)
