@@ -1,0 +1,54 @@
+@use "../variables" as var;
+
+@mixin list-bordered($width: "thin", $style: solid, $color: var.$red) {
+  @include var.border($width); // from your _border.scss
+  border-top-style: $style;
+  border-bottom-style: $style;
+  border-top-color: $color;
+  border-bottom-color: $color;
+  border-left-style: $style;
+  border-right-style: $style;
+  border-left-color: $color;
+  border-right-color: $color;
+}
+@mixin list-free($width: "thin", $style: solid, $color: var.$red) {
+  @include var.border-y($width); // from your _border.scss
+  border-top-style: $style;
+  border-bottom-style: $style;
+  border-top-color: $color;
+  border-bottom-color: $color;
+}
+
+.list-grp {
+  width: 33%;
+  text-align: map-get(var.$text-align, "left");
+  list-style-position: inside;
+}
+
+ul {
+  li {
+    list-style-type: disc;
+  }
+}
+
+ol {
+  li {
+    list-style-type: decimal;
+  }
+}
+
+.list-grp-brd {
+  @include list-bordered(thin, solid, var.$red);
+  li {
+    @include list-bordered(thin, solid, var.$red);
+    @include var.padding("4");
+  }
+}
+
+.list-grp-free {
+  @include list-free(thin, solid, var.$red);
+
+  li {
+    @include var.padding("4");
+  }
+}
